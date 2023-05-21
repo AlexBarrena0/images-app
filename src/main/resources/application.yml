@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/?currentSchema=images
+    username: abarrena0
+    password: abarrena0_tfg
+    driver-class-name: org.postgresql.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8083
+application:
+  name: images-service
+  version: 1.0.0
+  defaultLanguage: en_US
