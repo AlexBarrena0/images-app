@@ -27,12 +27,6 @@ public class ImageRepositoryImpl implements ImageRepository {
     }
 
     @Override
-    public void update(Image image) {
-        ImageEntity imageEntity = ImageConverter.INSTANCE.toEntity(image);
-        imageMapper.update(imageEntity);
-    }
-
-    @Override
     public void delete(Long id) {
         imageMapper.delete(id);
     }

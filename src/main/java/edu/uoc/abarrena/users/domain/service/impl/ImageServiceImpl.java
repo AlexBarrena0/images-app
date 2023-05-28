@@ -19,17 +19,12 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public byte[] findImageById(Long id) throws EntityNotFoundException {
+    public Image findImageById(Long id) throws EntityNotFoundException {
         Image image = imageRepository.findById(id);
         if (image == null) {
             throw new EntityNotFoundException("Image not found");
         }
-        return image.getContent();
-    }
-
-    @Override
-    public void updateImage(Image image) {
-        imageRepository.update(image);
+        return image;
     }
 
     @Override

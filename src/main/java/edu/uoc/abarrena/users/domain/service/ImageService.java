@@ -16,13 +16,7 @@ public interface ImageService {
      * @param id of the image to find
      * @return the image content with the given id
      */
-    public byte[] findImageById(Long id);
-
-    /**
-     * Updates an image
-     * @param image to update
-     */
-    public void updateImage(Image image);
+    public Image findImageById(Long id);
 
     /**
      * Deletes an image

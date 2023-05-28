@@ -8,4 +8,6 @@ import lombok.Data;
 public class ImageEntity {
     private Long id;
     private byte[] content;
+    private String contentType;
+    private String name;
 }

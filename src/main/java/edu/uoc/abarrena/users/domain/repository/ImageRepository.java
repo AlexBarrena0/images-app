@@ -18,12 +18,6 @@ public interface ImageRepository {
     public Image findById(Long id);
 
     /**
-     * Updates an image
-     * @param image to update
-     */
-    public void update(Image image);
-
-    /**
      * Deletes an image
      * @param id of the image to delete
      */
