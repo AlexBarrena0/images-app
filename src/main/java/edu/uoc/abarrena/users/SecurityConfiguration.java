@@ -32,9 +32,9 @@ public class SecurityConfiguration {
                 .and()
                 .authorizeHttpRequests((auth) -> auth
                         // Images
-                        .requestMatchers(HttpMethod.POST, "/images").hasAnyRole("TRAVELER")
-                        .requestMatchers(HttpMethod.GET, "/images/**").hasAnyRole("TRAVELER")
-                        .requestMatchers(HttpMethod.DELETE, "/images/**").hasAnyRole("TRAVELER")
+                        .requestMatchers(HttpMethod.POST, "/images").hasAnyRole("TRAVELER", "COMPANY", "ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/images/**").hasAnyRole("TRAVELER", "COMPANY", "ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/images/**").hasAnyRole("TRAVELER", "COMPANY", "ADMIN")
                 )
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
                 .build();
