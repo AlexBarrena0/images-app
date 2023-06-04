@@ -9,9 +9,11 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface ImageConverter {
 
-    public static final ImageConverter INSTANCE = Mappers.getMapper(ImageConverter.class);
+    ImageConverter INSTANCE = Mappers.getMapper(ImageConverter.class);
 
     ImageEntity toEntity(Image image);
+
     Image toDomain(ImageEntity imageEntity);
+
     ImageDto toDto(Image image);
 }

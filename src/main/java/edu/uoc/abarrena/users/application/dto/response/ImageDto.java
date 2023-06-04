@@ -7,8 +7,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class ImageDto {
 
-        private Long id;
-        private byte[] content;
-        private String contentType;
-        private String name;
+    private Long id;
+    private byte[] content;
+    private String contentType;
+    private String name;
 }
